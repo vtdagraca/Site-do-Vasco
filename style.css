@@ -1,0 +1,27 @@
+#Vitor {
+    text-align: center;
+    color: black;
+}
+#vitor1 {
+    color: rgb(0, 0, 0);
+}
+#vitor2 {
+    color: black;
+}
+#vitor3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+a {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
