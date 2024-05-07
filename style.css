@@ -21,6 +21,10 @@
     margin-right: auto;
     color: rgb(0, 47, 255);
     text-decoration:none
+}
+#vitor3:hover {
+    color: rgb(1, 137, 179);
+    background-color: aliceblue;
     
 }
 img {
@@ -31,4 +35,9 @@ img {
 }
 #vitor4 {
     text-align: center;
+}
+#bt1 {
+    display: block;
+    margin: 0 auto;
+    font-family: cursive;
 }
