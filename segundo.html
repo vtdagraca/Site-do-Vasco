@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace de Imóveis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .property-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .property-card:hover {
+            transform: scale(1.05);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .property-details {
+            padding: 1rem;
+        }
+
+        .property-details h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .property-details p {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marketplace de Imóveis</h1>
+    </header>
+    <main>
+        <div class="property-grid">
+            <!-- Os imóveis serão adicionados aqui pelo JavaScript -->
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const properties = [
+                {
+                    title: 'Imóvel 1',
+                    location: 'São Paulo, SP',
+                    price: 'R$ 500.000',
+                    image: 'https://via.placeholder.com/300',
+                    link: 'imovel1.html'
+                },
+                {
+                    title: 'Imóvel 2',
+                    location: 'Rio de Janeiro, RJ',
+                    price: 'R$ 750.000',
+                    image: 'https://via.placeholder.com/300',
+                    link: 'imovel2.html'
+                },
+                {
+                    title: 'Imóvel 3',
+                    location: 'Belo Horizonte, MG',
+                    price: 'R$ 600.000',
+                    image: 'https://via.placeholder.com/300',
+                    link: 'imovel3.html'
+                },
+                {
+                    title: 'Imóvel 4',
+                    location: 'Curitiba, PR',
+                    price: 'R$ 450.000',
+                    image: 'https://via.placeholder.com/300',
+                    link: 'imovel4.html'
+                },
+                {
+                    title: 'Imóvel 5',
+                    location: 'Porto Alegre, RS',
+                    price: 'R$ 550.000',
+                    image: 'https://via.placeholder.com/300',
+                    link: 'imovel5.html'
+                }
+            ];
+
+            const propertyGrid = document.querySelector('.property-grid');
+
+            properties.forEach(property => {
+                const propertyCard = document.createElement('a');
+                propertyCard.className = 'property-card';
+                propertyCard.href = property.link;
+
+                propertyCard.innerHTML = `
+                    <img src="${property.image}" alt="Imagem do Imóvel">
+                    <div class="property-details">
+                        <h2>${property.title}</h2>
+                        <p>Localização: ${property.location}</p>
+                        <p>Preço: ${property.price}</p>
+                    </div>
+                `;
+
+                propertyGrid.appendChild(propertyCard);
+            });
+        });
+    </script>
+</body>
+</html>
